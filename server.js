@@ -38,7 +38,7 @@ app.get("/webhook", (req, res) => {
     // Check if a token and mode is in the query string of the request
     if (mode && token) {
       // Check the mode and token sent is correct
-      if (mode === "subscribe" && token === config.verifyToken) {
+      if (mode === "subscribe" && token === "EAAaLElJ5UXABO8k1w0ZBlDdVlRNIqZAKXgQafZApFhq1uW1VRy4WQouizpUPlwHWRfVXoBZCy9ToGmBacU23dyaPrrZAQXWJ3tKIWi2IthadoSsSUS2wvgqmm9SI4VR6SDVINs81OVMQJuZCzeq9AskqVdgwyTC9pGvykBpWZBN0PPb1iITrtTeTdjZA") {
         // Respond with the challenge token from the request
         console.log("WEBHOOK_VERIFIED");
         res.status(200).send(challenge);
