@@ -52,7 +52,7 @@ app.get("/webhook", (req, res) => {
   // Create the endpoint for your webhook
   app.post("/webhook", (req, res) => {
     let body = req.body;
-  
+    console.log("BODY : ",body)
     console.log(`\u{1F7EA} Received webhook:`);
     console.dir(body, { depth: null });
   
@@ -166,7 +166,9 @@ app.get("/webhook", (req, res) => {
     }
   });
 
+// app.post('/reply',(req,res)=>{
 
+// })
 app.listen(PORT, () => {
     console.log("Server is running at", PORT);
 });
