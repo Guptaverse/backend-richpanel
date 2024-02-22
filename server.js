@@ -38,7 +38,7 @@ app.get("/webhook", (req, res) => {
     // Check if a token and mode is in the query string of the request
     if (mode && token) {
       // Check the mode and token sent is correct
-      if (mode === "subscribe" && token === "EAAaLElJ5UXABO8k1w0ZBlDdVlRNIqZAKXgQafZApFhq1uW1VRy4WQouizpUPlwHWRfVXoBZCy9ToGmBacU23dyaPrrZAQXWJ3tKIWi2IthadoSsSUS2wvgqmm9SI4VR6SDVINs81OVMQJuZCzeq9AskqVdgwyTC9pGvykBpWZBN0PPb1iITrtTeTdjZA") {
+      if (mode === "subscribe" && token === "EAAZABcyLLzBUBO8EeG7MZAsFVRb5KuuBNmYM7KzZCjwhT7xxZBXRqf8BbN5dQVP37smDcWPRz2iIIaHdxFxd0vnmYJyyqMmOjqP1MPjg0aOiKJQoUzxuXyIfkorUfO2ajFqfgS4qhBcV4Hl4nNS1roSUCShulDv6EVU8BYjBmNPnsbO2ZCZAOArB6vJfFSlIZCfFUgkWWOwi2iQ7WOlvIuGSzPh9InK") {
         // Respond with the challenge token from the request
         console.log("WEBHOOK_VERIFIED");
         res.status(200).send(challenge);
@@ -48,7 +48,7 @@ app.get("/webhook", (req, res) => {
       }
     }
   });
-  
+
   // Create the endpoint for your webhook
   app.post("/webhook", (req, res) => {
     let body = req.body;
